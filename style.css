@@ -1,0 +1,428 @@
+/* Pamata stili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --header-bg: #2c3e50;
+    --header-text: white;
+    --card-bg: white;
+    --card-text: #7f8c8d;
+    --card-title: #2c3e50;
+    --aside-bg: #ecf0f1;
+    --footer-bg: #2c3e50;
+    --footer-text: white;
+    --nav-hover: #34495e;
+    --button-bg: #3498db;
+    --button-hover: #2980b9;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+    --hamburger-bg: rgba(44, 62, 80, 0.9);
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --header-bg: #121212;
+    --header-text: #f0f0f0;
+    --card-bg: #2d2d2d;
+    --card-text: #cccccc;
+    --card-title: #ffffff;
+    --aside-bg: #252525;
+    --footer-bg: #121212;
+    --footer-text: #f0f0f0;
+    --nav-hover: #3d3d3d;
+    --button-bg: #2573a7;
+    --button-hover: #1c5a82;
+    --shadow: 0 4px 8px rgba(0,0,0,0.4);
+    --hamburger-bg: rgba(18, 18, 18, 0.9);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header stili */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigācija */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: var(--nav-hover);
+    transform: translateY(-2px);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--header-text);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    min-width: 210px;
+    flex-direction: column;
+    padding: 10px 0;
+    padding-right: 40px;
+    z-index: 200;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.dropdown-menu li a {
+    color: var(--card-title);
+    padding: 10px 0px 10px 20px;
+    text-align: left;
+    border-radius: 6px;
+    background: none;
+    transition: var(--transition);
+}
+
+.dropdown-menu li a:hover {
+    background: var(--nav-hover);
+    color: var(--header-text);
+    box-shadow: var(--shadow);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: flex;
+}
+/* Dark mode pārslēgšanas poga */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--header-text);
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    margin-bottom: 3px;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* Galvenais saturs */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: var(--card-title);
+    transition: var(--transition);
+}
+
+p {
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Karteļu sadaļa */
+.cards-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--card-title);
+    transition: var(--transition);
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: var(--card-text);
+    transition: var(--transition);
+}
+
+.card-button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.card:hover .card-button {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Sānu josla */
+aside {
+    background-color: var(--aside-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+aside h3 {
+    margin-bottom: 15px;
+    color: var(--card-title);
+    transition: var(--transition);
+}
+
+aside ul {
+    list-style-position: inside;
+    padding-left: 15px;
+}
+
+aside li {
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+aside a {
+    color: var(--button-bg);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+aside a:hover {
+    text-decoration: underline;
+    color: var(--button-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: var(--footer-text);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    transition: var(--transition);
+}
+
+@media (max-width: 900px) {
+    header {
+        display: flex;
+    }
+    .site-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .nav-links {
+        position: fixed;
+        padding-top: 10px;
+        top: 75px;
+        right: -30%;
+        flex-direction: column;
+        background: var(--hamburger-bg);
+        width: 30%;
+        transition: var(--transition);
+        height: calc(100vh - 70px);
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 15px;
+      z-index: 1001;
+      cursor: pointer;
+      margin-top: 14px;
+      margin-right: 10px;
+    }
+    .hamburger span {
+      width: 30px;
+      height: 3px;
+      background: var(--bg-color);
+      transition: 0.3s;
+    }
+    .nav-links.active {
+        right: 0;
+    }
+}
+
+/* Responsivitāte */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .theme-toggle {
+        margin-top: 0px;
+        margin-left: 0;
+        margin-bottom: 4px;
+    }
+    .nav-links {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+}
