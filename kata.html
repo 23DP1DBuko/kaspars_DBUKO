@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata noteikumi - Latvijas Karatē federācija</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Papildu stili kata lapai */
+        .rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .chapter {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #cc0000;
+        }
+        
+        .chapter h2 {
+            color: #003366;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .rule-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #cc0000;
+        }
+        
+        .rule-item h4 {
+            color: #003366;
+            margin-bottom: 8px;
+        }
+        
+        .rule-item p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .rules-nav {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .rules-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .rules-nav li {
+            margin-bottom: 8px;
+        }
+        
+        .rules-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .rules-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .scoring-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .scoring-table th, .scoring-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .scoring-table th {
+            background: #003366;
+            color: white;
+        }
+        
+        .scoring-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header sadaļa -->
+    <header>
+        <div class="container header-content">
+            <div class="site-title"><a href="index.html" style="text-decoration: none; color:white;">Latvijas Karatē federācija</a></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Sākums</a></li>
+                    <li><a href="index.html#about">Par mums</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#services">Apmācības</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kata.html">Kata noteikumi</a></li>
+                            <li><a href="kumite.html">Kumite noteikumi</a></li>
+                            <li><a href="sekretari.html">Sekretāru noteikumi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Kontakti</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Galvenais saturs -->
+    <main class="container">
+        <div class="rules-container">
+            <h1>Kata sacensību noteikumi</h1>
+            <p class="intro-text">Pilnīgs WKF kata sacensību noteikumu apkopojums un skaidrojumi. Šajā dokumentā atradīsiet visu nepieciešamo informāciju par kata vērtēšanas kritērijiem, sacensību norisi un tiesnešu lomām.</p>
+            
+            <!-- Navigācija pa nodaļām -->
+            <div class="rules-nav">
+                <h3>Nodaļas:</h3>
+                <ul>
+                    <li><a href="#chapter1">1. Vispārīgie noteikumi</a></li>
+                    <li><a href="#chapter2">2. Sacensību norise</a></li>
+                    <li><a href="#chapter3">3. Vērtēšanas kritēriji</a></li>
+                    <li><a href="#chapter4">4. Tiesnešu pienākumi</a></li>
+                    <li><a href="#chapter5">5. Diskvalifikācijas iemesli</a></li>
+                    <li><a href="#chapter6">6. Obligāto katu saraksts</a></li>
+                </ul>
+            </div>
+
+            <!-- 1. nodaļa -->
+            <div class="chapter" id="chapter1">
+                <h2>1. Vispārīgie noteikumi</h2>
+                
+                <div class="rule-item">
+                    <h4>1.1. Kata definīcija</h4>
+                    <p>Kata ir formāls vingrinājums, kas sastāv no noteiktas aizsardzības un uzbrukšanas kustību secības. Katru kata izpilda viens sacensību dalībnieks.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.2. Sacensību formāti</h4>
+                    <p>Kata sacensības notiek individuāli un komandu veidā. Komandas sastāv no 3 dalībniekiem, kuri izpilda vienu un to pašu kata.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.3. Dalības prasības</h4>
+                    <p>Dalībniekiem jābūt oficiāli reģistrētiem savās valstu karatē federācijās un jāpieder atbilstošai vecuma un kvalifikācijas kategorijai.</p>
+                </div>
+            </div>
+
+            <!-- 2. nodaļa -->
+            <div class="chapter" id="chapter2">
+                <h2>2. Sacensību norise</h2>
+                
+                <div class="rule-item">
+                    <h4>2.1. Izpildes kārtība</h4>
+                    <p>Dalībnieks ieiet uz sacensību laukumu, nostājas sākuma pozīcijā, pasludina izvēlētās kata nosaukumu un sāk izpildi.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>2.2. Laika ierobežojumi</h4>
+                    <p>Katas izpildei ir noteikts maksimālais laika limits: 5 minūtes individuālajām sacensībām, 6 minūtes komandu sacensībām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>2.3. Laukuma izmantošana</h4>
+                    <p>Katas izpilde jāveic pilnībā uz oficiālā sacensību laukuma. Iziešana ārpus laukuma robežām noved pie soda punktu piešķiršanas.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Svarīgi:</strong> Dalībniekam ir tiesības izvēlēties jebkuru oficiāli atzītu kata no apstiprinātā saraksta. Izvēle neietekmē vērtējumu.
+                </div>
+            </div>
+
+            <!-- 3. nodaļa -->
+            <div class="chapter" id="chapter3">
+                <h2>3. Vērtēšanas kritēriji</h2>
+                
+                <div class="rule-item">
+                    <h4>3.1. Tehniskā precizitāte (40%)</h4>
+                    <p>Katras kustības pareiza izpilde, ieskaitot stājas, bloķēšanas tehnikas, triecienus un atbilstību tradicionālajai kata formai.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>3.2. Spēka demonstrēšana (20%)</h4>
+                    <p>Dinamisks un enerģisks izpildījums ar pareizu spēka pielietojumu katrā tehnikā.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>3.3. Ātruma un lēnuma kontrole (20%)</h4>
+                    <p>Ritma un tempa mainīšana atbilstoši kata prasībām, ar skaidri izteiktu kustību sākumu un beigām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>3.4. Balanss un stabila pozīcija (20%)</h4>
+                    <p>Līdzsvara uzturēšana visā kata izpildes laikā, ar stabilām un pareizām stājām.</p>
+                </div>
+                
+                <h3>Vērtēšanas skalas</h3>
+                <table class="scoring-table">
+                    <thead>
+                        <tr>
+                            <th>Vērtējums</th>
+                            <th>Apraksts</th>
+                            <th>Punkti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Teicami</td>
+                            <td>Gandrīz nevienu kļūdu, izcils tehniskais izpildījums</td>
+                            <td>8.5 - 10.0</td>
+                        </tr>
+                        <tr>
+                            <td>Ļoti labi</td>
+                            <td>Nelielas kļūdas, augsts tehniskais līmenis</td>
+                            <td>7.0 - 8.4</td>
+                        </tr>
+                        <tr>
+                            <td>Labi</td>
+                            <td>Pieņemams izpildījums ar vairākām kļūdām</td>
+                            <td>5.0 - 6.9</td>
+                        </tr>
+                        <tr>
+                            <td>Nepietiekami</td>
+                            <td>Daudz kļūdu, zems tehniskais līmenis</td>
+                            <td>0.0 - 4.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 4. nodaļa -->
+            <div class="chapter" id="chapter4">
+                <h2>4. Tiesnešu pienākumi</h2>
+                
+                <div class="rule-item">
+                    <h4>4.1. Galvenā tiesneša loma</h4>
+                    <p>Vada sacensības, dod komandas dalībniekiem, paziņo vērtējumus un pieņem galīgos lēmumus strīdīgās situācijās.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>4.2. Vērtētāju pienākumi</h4>
+                    <p>Pieci vērtētāji neatkarīgi novērtē katras kata izpildi un iesniedz savus vērtējumus. Augstākais un zemākais vērtējums tiek atmesti.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>4.3. Rezultātu apkopošana</h4>
+                    <p>Trīs atlikušie vērtējumi tiek summēti, un iegūtais rezultāts nosaka dalībnieka vietu.</p>
+                </div>
+            </div>
+
+            <!-- 5. nodaļa -->
+            <div class="chapter" id="chapter5">
+                <h2>5. Diskvalifikācijas iemesli</h2>
+                
+                <div class="rule-item">
+                    <h4>5.1. Tehniski pārkāpumi</h4>
+                    <p>Katas izpildes laikā pieļautas būtiskas kļūdas, kas izkropļo kata nozīmi vai saturu.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>5.2. Laika pārsniegšana</h4>
+                    <p>Katas izpilde pārsniedz noteikto laika limitu.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>5.3. Laukuma pārkāpumi</h4>
+                    <p>Vairākkārtēja iziešana ārpus sacensību laukuma robežām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>5.4. Uzvedības pārkāpumi</h4>
+                    <p>Nepiedienīga uzvedība pret tiesnešiem, organizatoriem vai citiem dalībniekiem.</p>
+                </div>
+            </div>
+
+            <!-- 6. nodaļa -->
+            <div class="chapter" id="chapter6">
+                <h2>6. Obligāto katu saraksts</h2>
+                
+                <div class="rule-item">
+                    <h4>6.1. Shotokan stils</h4>
+                    <p>Heian katas (Shodan, Nidan, Sandan, Yondan, Godan), Tekki katas, Bassai Dai, Kanku Dai, Jion, Enpi, Hangetsu, Gankaku.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.2. Shito-ryu stils</h4>
+                    <p>Pinan katas, Naifanchin, Bassai, Kosokun, Seienchin, Seipai, Kururunfa, Suparinpei.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.3. Goju-ryu stils</h4>
+                    <p>Gekisai katas, Saifa, Seiyunchin, Shisochin, Sanseru, Sepai, Kururunfa, Suparinpei.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.4. Wado-ryu stils</h4>
+                    <p>Pinan katas, Kushanku, Naihanchi, Seishan, Chinto, Bassai, Niseishi, Rohai, Wanshu.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Piezīme:</strong> Sacensībās ir atļauts izpildīt arī citas oficiāli atzītas katas, kas nav iekļautas šajā sarakstā, ja tās atbilst WKF prasībām.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 Latvijas Karatē federācija - Visas tiesības aizsargātas
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

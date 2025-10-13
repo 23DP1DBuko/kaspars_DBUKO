@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumite noteikumi - Latvijas Karatē federācija</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Papildu stili kumite lapai */
+        .rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .chapter {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #cc0000;
+        }
+        
+        .chapter h2 {
+            color: #003366;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .rule-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #cc0000;
+        }
+        
+        .rule-item h4 {
+            color: #003366;
+            margin-bottom: 8px;
+        }
+        
+        .rule-item p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .rules-nav {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .rules-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .rules-nav li {
+            margin-bottom: 8px;
+        }
+        
+        .rules-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .rules-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-note {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .scoring-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .scoring-table th, .scoring-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .scoring-table th {
+            background: #003366;
+            color: white;
+        }
+        
+        .scoring-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .penalty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .penalty-table th, .penalty-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .penalty-table th {
+            background: #cc0000;
+            color: white;
+        }
+        
+        .technique-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .technique-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #003366;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header sadaļa -->
+    <header>
+        <div class="container header-content">
+            <div class="site-title"><a href="index.html" style="text-decoration: none; color:white;">Latvijas Karatē federācija</a></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Sākums</a></li>
+                    <li><a href="index.html#about">Par mums</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#services">Apmācības</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kata.html">Kata noteikumi</a></li>
+                            <li><a href="kumite.html">Kumite noteikumi</a></li>
+                            <li><a href="sekretari.html">Sekretāru noteikumi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Kontakti</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Galvenais saturs -->
+    <main class="container">
+        <div class="rules-container">
+            <h1>Kumite sacensību noteikumi</h1>
+            <p class="intro-text">Pilnīgs WKF kumite sacensību noteikumu apkopojums un skaidrojumi. Šajā dokumentā atradīsiet visu nepieciešamo informāciju par punktu sistēmu, cīņas noteikumiem, sodiem un tiesnešu lomām.</p>
+            
+            <!-- Navigācija pa nodaļām -->
+            <div class="rules-nav">
+                <h3>Nodaļas:</h3>
+                <ul>
+                    <li><a href="#chapter1">1. Vispārīgie noteikumi</a></li>
+                    <li><a href="#chapter2">2. Sacensību laukums un aprīkojums</a></li>
+                    <li><a href="#chapter3">3. Punktu sistēma</a></li>
+                    <li><a href="#chapter4">4. Atļautās un aizliegtās tehnikas</a></li>
+                    <li><a href="#chapter5">5. Sodu sistēma</a></li>
+                    <li><a href="#chapter6">6. Tiesnešu pienākumi</a></li>
+                    <li><a href="#chapter7">7. Cīņas norise</a></li>
+                </ul>
+            </div>
+
+            <!-- 1. nodaļa -->
+            <div class="chapter" id="chapter1">
+                <h2>1. Vispārīgie noteikumi</h2>
+                
+                <div class="rule-item">
+                    <h4>1.1. Kumite definīcija</h4>
+                    <p>Kumite ir kontrolētu tehniku apmaiņa starp diviem sacensību dalībniekiem oficiālā sacensību laukumā. Cīņa notiek saskaņā ar stingri noteiktiem noteikumiem un drošības prasībām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.2. Cīņas ilgums</h4>
+                    <p>Parastā cīņas ilgums ir 3 minūtes vīriešiem un 2 minūtes sievietēm. Ja rezultāts ir neizšķirts, notiek papildu kārta (Encho-sen) ar ilgumu 1 minūti.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.3. Uzvaras noteikšana</h4>
+                    <p>Uzvaru var iegūt punktu pārsvarā, ar ippon (8 punktu starpību), ar hansoku (diskvalifikāciju) vai ar kiken (pretinieka atteikšanos).</p>
+                </div>
+            </div>
+
+            <!-- 2. nodaļa -->
+            <div class="chapter" id="chapter2">
+                <h2>2. Sacensību laukums un aprīkojums</h2>
+                
+                <div class="rule-item">
+                    <h4>2.1. Laukuma izmēri</h4>
+                    <p>Oficiālais sacensību laukums ir 8x8 metri kvadrātā ar drošības zonu vismaz 1 metru platā apkārt. Laukums ir marķēts ar skaidri redzamu līniju.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>2.2. Obligātais aprīkojums</h4>
+                    <p>Katram dalībniekam jāvalkā oficiāls karategi ar federācijas emblēmu, aizsargkauss (vīriešiem), zobu aizsargs un apakšveļa.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>2.3. Aizsargierīces</h4>
+                    <p>Atļautas ir WKF apstiprinātas cimdu, pēdu un ķermeņa aizsargierīces. Visas aizsargierīces jābūt sarkanās vai zilās krāsas atbilstoši dalībnieka stūrim.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Svarīgi:</strong> Visam aprīkojumam jābūt WKF apstiprinātam un bez kādiem bojājumiem. Tiesnešiem ir tiesības pārbaudīt aprīkojumu pirms cīņas.
+                </div>
+            </div>
+
+            <!-- 3. nodaļa -->
+            <div class="chapter" id="chapter3">
+                <h2>3. Punktu sistēma</h2>
+                
+                <div class="rule-item">
+                    <h4>3.1. Punktu kategorijas</h4>
+                    <p>Punkti tiek piešķirti par kontrolētiem un precīziem triecieniem, kas sasniedz atļautās zonas ar pareizu formu, spēku un attālumu.</p>
+                </div>
+                
+                <table class="scoring-table">
+                    <thead>
+                        <tr>
+                            <th>Punkti</th>
+                            <th>Tehnika</th>
+                            <th>Apraksts</th>
+                            <th>Piemēri</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ippon (3 punkti)</strong></td>
+                            <td>Augsta līmeņa trieciens</td>
+                            <td>Jodan trieciens ar roku vai kāju uz galvas, kakla vai sejas</td>
+                            <td>Jodan mawashi geri, jodan ushiro geri</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Waza-ari (2 punkti)</strong></td>
+                            <td>Vidēja līmeņa trieciens</td>
+                            <td>Chudan trieciens ar roku vai kāju uz ķermeņa</td>
+                            <td>Chudan gyaku zuki, chudan mae geri</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yuko (1 punkts)</strong></td>
+                            <td>Trieciens ar roku</td>
+                            <td>Trieciens ar roku uz vidukļa augšdaļas vai muguras</td>
+                            <td>Chudan oi zuki, jodan kizami zuki</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="rule-item">
+                    <h4>3.2. Punktu derīgums</h4>
+                    <p>Punkti tiek pieskaitīti tikai tad, ja vismaz divi tiesneši vienlaicīgi parāda punktu zīmi. Galvenajam tiesnesim ir pēdējais vārds punktu piešķiršanā.</p>
+                </div>
+            </div>
+
+            <!-- 4. nodaļa -->
+            <div class="chapter" id="chapter4">
+                <h2>4. Atļautās un aizliegtās tehnikas</h2>
+                
+                <div class="rule-item">
+                    <h4>4.1. Atļautās tehnikas</h4>
+                    <div class="technique-list">
+                        <div class="technique-item">
+                            <h5>Triecieni ar roku</h5>
+                            <p>Zuki, uchi, tsuki tehnikas uz atļautajām zonām ar kontrolētu kontaktu</p>
+                        </div>
+                        <div class="technique-item">
+                            <h5>Triecieni ar kāju</h5>
+                            <p>Geri, mawashi geri, ushiro geri uz atļautajām zonām</p>
+                        </div>
+                        <div class="technique-item">
+                            <h5>Bloķēšanas tehnikas</h5>
+                            <p>Uke tehnikas triecienu novirzīšanai un aizsardzībai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>4.2. Aizliegtās tehnikas</h4>
+                    <div class="technique-list">
+                        <div class="technique-item">
+                            <h5>Aizliegtās zonas</h5>
+                            <p>Kakls, mugurkauls, locītavas, pakaušis, palodzes</p>
+                        </div>
+                        <div class="technique-item">
+                            <h5>Aizliegtās metodes</h5>
+                            <p>Grūdieni, satvērieni, cīņa uz grīdas, atvērtas plaukstas triecieni</p>
+                        </div>
+                        <div class="technique-item">
+                            <h5>Bīstamas tehnikas</h5>
+                            <p>Pagriezieni uz locītavām, kakla satvērieni, zemās triecieni</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warning-note">
+                    <strong>Brīdinājums:</strong> Jebkura aizliegta tehnika vai pārmērīgs kontakts noved pie soda punktu piešķiršanas vai diskvalifikācijas.
+                </div>
+            </div>
+
+            <!-- 5. nodaļa -->
+            <div class="chapter" id="chapter5">
+                <h2>5. Sodu sistēma</h2>
+                
+                <div class="rule-item">
+                    <h4>5.1. Sodu kategorijas</h4>
+                    <p>Sodi tiek piešķirti par noteikumu pārkāpumiem un tiek klasificēti četrās kategorijās atbilstoši pārkāpuma smagumam.</p>
+                </div>
+                
+                <table class="penalty-table">
+                    <thead>
+                        <tr>
+                            <th>Sods</th>
+                            <th>Pārkāpums</th>
+                            <th>Sekas</th>
+                            <th>Piemēri</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Čukoku</strong></td>
+                            <td>Neliels pārkāpums</td>
+                            <td>Brīdinājums</td>
+                            <td>Neliels kontakts, maza laukuma iziešana</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Keikoku</strong></td>
+                            <td>Vidējs pārkāpums</td>
+                            <td>1 punkts pretiniekam</td>
+                            <td>Pārmērīgs kontakts, apzināta laukuma iziešana</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hansoku</strong></td>
+                            <td>Nopietns pārkāpums</td>
+                            <td>Diskvalifikācija no cīņas</td>
+                            <td>Bīstama tehnika, nepiedienīga uzvedība</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Šikkaku</strong></td>
+                            <td>Ļoti nopietns pārkāpums</td>
+                            <td>Diskvalifikācija no sacensībām</td>
+                            <td>Apzināta savainuošana, agresīva uzvedība</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="rule-item">
+                    <h4>5.2. Soda uzkrāšanās</h4>
+                    <p>Divas čukoku kļūdas veido vienu keikoku. Divi keikoku veido vienu hansoku. Šikkaku tiek piešķirts nekavējoties par ļoti nopietniem pārkāpumiem.</p>
+                </div>
+            </div>
+
+            <!-- 6. nodaļa -->
+            <div class="chapter" id="chapter6">
+                <h2>6. Tiesnešu pienākumi</h2>
+                
+                <div class="rule-item">
+                    <h4>6.1. Galvenā tiesneša (Shushin) loma</h4>
+                    <p>Vada cīņu, dod komandas, paziņo punktus un sodus, pieņem galīgos lēmumus, uztur komunikāciju ar laukuma tiesnešiem.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.2. Laukuma tiesnešu (Fukushin) pienākumi</h4>
+                    <p>Četri laukuma tiesneši novēro cīņu no visām četrām pusēm, rāda punktu zīmes, palīdz galvenajam tiesnesim pieņemt lēmumus.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.3. Arbitra (Kansa) loma</h4>
+                    <p>Pārrauga laika turēšanu, rezultātu reģistrēšanu un tehnisko sacensību norisi ārpus laukuma.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Svarīgi:</strong> Visi tiesneši darbojas kā komanda. Galvenajam tiesnesim ir pēdējais vārds, bet viņš ņem vērā laukuma tiesnešu viedokli.
+                </div>
+            </div>
+
+            <!-- 7. nodaļa -->
+            <div class="chapter" id="chapter7">
+                <h2>7. Cīņas norise</h2>
+                
+                <div class="rule-item">
+                    <h4>7.1. Cīņas sākums</h4>
+                    <p>Dalībnieki ieiet laukumā, nostājas starta pozīcijās, noliecas (rei) un gaida galvenā tiesneša komandu "HAJIME!".</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>7.2. Cīņas pārtraukšana</h4>
+                    <p>Galvenais tiesnesis pārtrauc cīņu ar komandu "YAME!" punktu vai soda piešķiršanas brīdī, pārkāpuma gadījumā vai ja dalībnieks iziet ārpus laukuma.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>7.3. Cīņas beigas</h4>
+                    <p>Cīņa beidzas ar galvenā tiesneša komandu "SOREMADE!" pēc laika beigām, uzvaras vai diskvalifikācijas. Dalībnieki atgriežas starta pozīcijās un sagaida rezultāta paziņošanu.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>7.4. Rezultātu paziņošana</h4>
+                    <p>Galvenais tiesnesis paziņo uzvarētāju, rādot uz viņu ar atvērtu delnu. Abi dalībnieki noliecas (rei) viens otram un tiesnešiem pirms laukuma atstāšanas.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 Latvijas Karatē federācija - Visas tiesības aizsargātas
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

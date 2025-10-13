@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekretāru noteikumi - Latvijas Karatē federācija</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Papildu stili sekretāru lapai */
+        .rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .chapter {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #cc0000;
+        }
+        
+        .chapter h2 {
+            color: #003366;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        
+        .rule-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #cc0000;
+        }
+        
+        .rule-item h4 {
+            color: #003366;
+            margin-bottom: 8px;
+        }
+        
+        .rule-item p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .rules-nav {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .rules-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .rules-nav li {
+            margin-bottom: 8px;
+        }
+        
+        .rules-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .rules-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .procedure-note {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .documents-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .documents-table th, .documents-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .documents-table th {
+            background: #003366;
+            color: white;
+        }
+        
+        .documents-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .equipment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .equipment-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #003366;
+        }
+        
+        .timeline {
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 3px solid #cc0000;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cc0000;
+        }
+        
+        .checklist {
+            background: #e8f5e8;
+            border: 1px solid #c8e6c9;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #c8e6c9;
+        }
+        
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header sadaļa -->
+    <header>
+        <div class="container header-content">
+            <div class="site-title"><a href="index.html" style="text-decoration: none; color:white;">Latvijas Karatē federācija</a></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Sākums</a></li>
+                    <li><a href="index.html#about">Par mums</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#services">Apmācības</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kata.html">Kata noteikumi</a></li>
+                            <li><a href="kumite.html">Kumite noteikumi</a></li>
+                            <li><a href="sekretari.html">Sekretāru apmācība</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Kontakti</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Galvenais saturs -->
+    <main class="container">
+        <div class="rules-container">
+            <h1>Sekretāru darba noteikumi</h1>
+            <p class="intro-text">Pilnīgs WKF sekretāru darba noteikumu apkopojums un skaidrojumi. Šajā dokumentā atradīsiet visu nepieciešamo informāciju par dokumentācijas sagatavošanu, rezultātu reģistrēšanu un sekretāru pienākumiem sacensību laikā.</p>
+            
+            <!-- Navigācija pa nodaļām -->
+            <div class="rules-nav">
+                <h3>Nodaļas:</h3>
+                <ul>
+                    <li><a href="#chapter1">1. Sekretāru pienākumi</a></li>
+                    <li><a href="#chapter2">2. Sacensību dokumentācija</a></li>
+                    <li><a href="#chapter3">3. Rezultātu reģistrēšana</a></li>
+                    <li><a href="#chapter4">4. Darba vieta un aprīkojums</a></li>
+                    <li><a href="#chapter5">5. Komunikācija ar tiesnešiem</a></li>
+                    <li><a href="#chapter6">6. Kļūdu labošanas procedūras</a></li>
+                    <li><a href="#chapter7">7. Sacensību norises plānošana</a></li>
+                </ul>
+            </div>
+
+            <!-- 1. nodaļa -->
+            <div class="chapter" id="chapter1">
+                <h2>1. Sekretāru pienākumi</h2>
+                
+                <div class="rule-item">
+                    <h4>1.1. Galvenie pienākumi</h4>
+                    <p>Sekretāri atbild par sacensību administratīvo daļu - dokumentācijas sagatavošanu, rezultātu reģistrēšanu, rezultātu tabulu uzturēšanu un informācijas nodošanu tiesnešiem un dalībniekiem.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.2. Sekretāru komanda</h4>
+                    <p>Katrās sacensībās strādā vismaz 2 sekretāri - galvenais sekretārs un palīgsekretārs. Lielākās sacensībās var būt līdz 4 sekretāriem ar specifiskām atbildībām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>1.3. Atbildības zonas</h4>
+                    <p>Sekretāri sadala atbildības zonas: rezultātu reģistrēšana, komunikācija ar tiesnešiem, informācijas tabulas atjaunināšana, dokumentu glabāšana.</p>
+                </div>
+            </div>
+
+            <!-- 2. nodaļa -->
+            <div class="chapter" id="chapter2">
+                <h2>2. Sacensību dokumentācija</h2>
+                
+                <div class="rule-item">
+                    <h4>2.1. Obligātie dokumenti</h4>
+                    <p>Sekretāriem jāsagatavo un jāuztur šādi dokumenti: dalībnieku reģistrācijas formas, tiesnešu līgumi, rezultātu protokoli, incidentu ziņojumi un gala rezultātu atskaite.</p>
+                </div>
+                
+                <table class="documents-table">
+                    <thead>
+                        <tr>
+                            <th>Dokuments</th>
+                            <th>Saturs</th>
+                            <th>Laiks</th>
+                            <th>Atbildīgais</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Reģistrācijas forma</strong></td>
+                            <td>Dalībnieku dati, svara kategorijas, klubs</td>
+                            <td>Pirms sacensībām</td>
+                            <td>Galvenais sekretārs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rezultātu protokols</strong></td>
+                            <td>Visu cīņu rezultāti, punkti, sodi</td>
+                            <td>Sacensību laikā</td>
+                            <td>Visi sekretāri</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tiesnešu līgums</strong></td>
+                            <td>Tiesnešu dati, paraksti, atlīdzība</td>
+                            <td>Pirms sacensībām</td>
+                            <td>Galvenais sekretārs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gala atskaite</strong></td>
+                            <td>Kopējie rezultāti, statistika, incidenti</td>
+                            <td>Pēc sacensībām</td>
+                            <td>Galvenais sekretārs</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="rule-item">
+                    <h4>2.2. Dokumentu glabāšana</h4>
+                    <p>Visi dokumenti jāglabā vismaz 2 gadus pēc sacensībām. Digitālie dokumenti jāglabā drošā vietā ar regulārām dublējumiem.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Svarīgi:</strong> Visiem dokumentiem jābūt aizpildītiem ar skaidru, lasāmu rokrakstu vai drukātu tekstu. Kļūdas jālabo, izsvītrojot nepareizo un pievienojot pareizo informāciju ar parakstu.
+                </div>
+            </div>
+
+            <!-- 3. nodaļa -->
+            <div class="chapter" id="chapter3">
+                <h2>3. Rezultātu reģistrēšana</h2>
+                
+                <div class="rule-item">
+                    <h4>3.1. Rezultātu reģistrēšanas kārtība</h4>
+                    <p>Pēc katras cīņas sekretāri saņem rezultātu veidlapu no galvenā tiesneša, pārbauda tās pareizību un ievada datus rezultātu sistēmā.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>3.2. Datu pārbaude</h4>
+                    <p>Pirms datu ievadīšanas sekretāram jāpārbauda: dalībnieku vārdu pareizība, punktu summas, soda punkti, uzvarētāja noteikšanas pareizība.</p>
+                </div>
+                
+                <div class="procedure-note">
+                    <h5>Rezultātu reģistrēšanas procedūra:</h5>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h6>1. SOLIS: Veidlapas saņemšana</h6>
+                            <p>Saņemt rezultātu veidlapu no galvenā tiesneša pēc cīņas beigām</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>2. SOLIS: Datu pārbaude</h6>
+                            <p>Pārbaudīt visu informācijas pareizību un pilnīgumu</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>3. SOLIS: Sistēmas ievade</h6>
+                            <p>Ievadīt datus datorizētajā rezultātu sistēmā</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>4. SOLIS: Apstiprināšana</h6>
+                            <p>Parakstīt veidlapu kā apstiprinājumu par datu pareizību</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>5. SOLIS: Arhivēšana</h6>
+                            <p>Nolikt veidlapu arhīvā pēc digitālās ievades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. nodaļa -->
+            <div class="chapter" id="chapter4">
+                <h2>4. Darba vieta un aprīkojums</h2>
+                
+                <div class="rule-item">
+                    <h4>4.1. Sekretariāta izvietojums</h4>
+                    <p>Sekretariātam jāatrodas tuvu sacensību laukumam, bet ārpus skatītāju zonas. Tam jābūt ar pietiekamu gaismu, gaisa vadu un aizsardzību no nedēlamām personām.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>4.2. Obligātais aprīkojums</h4>
+                    <div class="equipment-list">
+                        <div class="equipment-item">
+                            <h5>Dokumentācija</h5>
+                            <p>Rezultātu veidlapas, reģistrācijas formas, protokolu veidnes, kārtis</p>
+                        </div>
+                        <div class="equipment-item">
+                            <h5>Rakstāmie piederumi</h5>
+                            <p>Pildspalvas, zīmuļi, marķieri, dzēšgumijas, korektori</p>
+                        </div>
+                        <div class="equipment-item">
+                            <h5>Tehnika</h5>
+                            <p>Dators, printeris, kalkulators, taimeris, sakaru ierīces</p>
+                        </div>
+                        <div class="equipment-item">
+                            <h5>Organizatoriskais</h5>
+                            <p>Mapes, līmes, šķēres, saspraudes, lapiņas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checklist">
+                    <h5>Sekretariāta sagatavošanas kontrolsaraksts:</h5>
+                    <ul>
+                        <li>✅ Visi dokumenti sagatavoti un sakārtoti</li>
+                        <li>✅ Dators un printeris darbojas</li>
+                        <li>✅ Pietiekami daudz rakstāmpiederumu</li>
+                        <li>✅ Komunikācijas ierīces uzlādētas</li>
+                        <li>✅ Darba vieta sakārtota un tīra</li>
+                        <li>✅ Rezerves materiāli pieejami</li>
+                        <li>✅ Informācijas tabula sagatavota</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. nodaļa -->
+            <div class="chapter" id="chapter5">
+                <h2>5. Komunikācija ar tiesnešiem</h2>
+                
+                <div class="rule-item">
+                    <h4>5.1. Komunikācijas kanāli</h4>
+                    <p>Sekretāri uztur regulāru komunikāciju ar galveno tiesnesi, laukuma tiesnešiem un arbitrācijas komiteju, izmantojot radiosakarus, zīmju valodu un personīgus kontaktus.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>5.2. Informācijas apmaiņa</h4>
+                    <p>Sekretāri nodod tiesnešiem informāciju par dalībniekiem, svara kategorijām, sacensību grafiku, bet saņem no tiem rezultātus, soda lēmumus un incidentu ziņojumus.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>5.3. Konfliktu risināšana</h4>
+                    <p>Konfliktu gadījumā starp tiesnešiem un dalībniekiem, sekretāri informē arbitrācijas komiteju un sagatavo nepieciešamo dokumentāciju.</p>
+                </div>
+                
+                <div class="important-note">
+                    <strong>Komunikācijas princips:</strong> Sekretāri vienmēr rīkojas profesionāli un objektīvi. Informācija tiek nodota tikai oficiālajos kanālos un tikai autorizētām personām.
+                </div>
+            </div>
+
+            <!-- 6. nodaļa -->
+            <div class="chapter" id="chapter6">
+                <h2>6. Kļūdu labošanas procedūras</h2>
+                
+                <div class="rule-item">
+                    <h4>6.1. Kļūdu veidi</h4>
+                    <p>Sekretāri var pieļaut šādas kļūdas: nepareiza dalībnieka vārda reģistrēšana, nepareiza rezultāta ievade, pazaudēti dokumenti, tehniski kļūmes aprīkojumā.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.2. Kļūdu labošana</h4>
+                    <p>Kļūdas jālabo nekavējoties pēc to atklāšanas. Jebkuras izmaiņas rezultātu veidlapā jāapstiprina ar galvenā tiesneša parakstu.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>6.3. Incidentu reģistrēšana</h4>
+                    <p>Visas kļūdas un incidenti jāreģistrē speciālā žurnālā ar precīzu aprakstu, laiku, iemesliem un veiktajām darbībām.</p>
+                </div>
+                
+                <div class="procedure-note">
+                    <h5>Kļūdu labošanas algoritms:</h5>
+                    <ol>
+                        <li>Atklāt kļūdu</li>
+                        <li>Paziņot galvenajam tiesnesim</li>
+                        <li>Saņemt apstiprinājumu labošanai</li>
+                        <li>Izveidot labojumu dokumentos</li>
+                        <li>Apstiprināt labojumu ar parakstu</li>
+                        <li>Reģistrēt incidentu žurnālā</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 7. nodaļa -->
+            <div class="chapter" id="chapter7">
+                <h2>7. Sacensību norises plānošana</h2>
+                
+                <div class="rule-item">
+                    <h4>7.1. Pirms sacensībām</h4>
+                    <p>Sekretāri piedalās sacensību plānošanā - sagatavo dokumentus, koordinē dalībnieku reģistrāciju, plāno darba grafiku un pārbauda aprīkojumu.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>7.2. Sacensību laikā</h4>
+                    <p>Sekretāri nodrošina nepārtrauktu rezultātu reģistrēšanu, uztur informācijas plūsmu starp visām sacensību daļām un risina neparedzētas situācijas.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h4>7.3. Pēc sacensībām</h4>
+                    <p>Sekretāri apkopo galīgos rezultātus, sagatavo atskaites, arhivē dokumentus un veic sacensību analīzi nākotnes uzlabošanai.</p>
+                </div>
+                
+                <div class="checklist">
+                    <h5>Dienas beigu kontrolsaraksts:</h5>
+                    <ul>
+                        <li>✅ Visi rezultāti ievadīti un pārbaudīti</li>
+                        <li>✅ Dokumenti sakārtoti un sagatavoti arhivēšanai</li>
+                        <li>✅ Aprīkojums izslēgts un noslēgts</li>
+                        <li>✅ Nākamās dienas grafiks sagatavots</li>
+                        <li>✅ Komandas sapulce notikusi</li>
+                        <li>✅ Incidentu žurnāls aizpildīts</li>
+                        <li>✅ Darba vieta sakārtota</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 Latvijas Karatē federācija - Visas tiesības aizsargātas
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
