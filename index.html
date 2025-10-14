@@ -27,6 +27,40 @@
                 </ul>
             </nav>
             <button class="theme-toggle" id="themeToggle">🌙</button>
+            <button id="myBtn">Ienākt</button>
+
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-header">
+                        <button class="tab-button active" id="loginTab">Login</button>
+                        <button class="tab-button" id="registerTab">Register</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Login Form -->
+                        <form id="loginForm" class="form active">
+                            <label for="loginEmail">Email:</label>
+                            <input type="email" id="loginEmail" name="loginEmail" required>
+                            <label for="loginPassword">Password:</label>
+                            <input type="password" id="loginPassword" name="loginPassword" required>
+                            <button type="submit">Login</button>
+                        </form>
+                        <!-- Register Form -->
+                        <form id="registerForm" class="form">
+                            <label for="registerName">Name:</label>
+                            <input type="text" id="registerName" name="registerName" required>
+                            <label for="registerEmail">Email:</label>
+                            <input type="email" id="registerEmail" name="registerEmail" required>
+                            <label for="registerPassword">Password:</label>
+                            <input type="password" id="registerPassword" name="registerPassword" required>
+                            <button type="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            </div>
         </div>
         <div class="hamburger">
             <span></span>
