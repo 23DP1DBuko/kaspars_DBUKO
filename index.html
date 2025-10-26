@@ -10,6 +10,11 @@
     <!-- Header sadaļa -->
     <header>
         <div class="container header-content">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="site-title"><a href="index.html" style="text-decoration: none; color:white;">Latvijas Karatē federācija</a></div>
             <nav>
                 <ul class="nav-links">
@@ -62,11 +67,6 @@
 
             </div>
         </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
 
     <!-- Galvenais saturs -->
@@ -74,7 +74,7 @@
         <section id="home">
             <h1>Laipni lūgti Karatē tiesnešu un sekretāru apmācību platformā!</h1>
             <p>Šī ir oficiālā Latvijas Karatē federācijas platforma tiesnešu un sekretāru apmācībai un zināšanu pārbaudei. Šeit jūs atradīsiet visus nepieciešamos materiālus un testus.</p>
-            <img src="https://placehold.co/600x400" alt="Karatē sacensību attēls" class="intro-image">
+            <img src="https://setopen.sportdata.org/wkfrefereeranking/images/slide2.jpg" alt="Karatē sacensību attēls" class="intro-image">
         </section>
 
         <!-- Par mums sadaļa -->
@@ -87,34 +87,48 @@
         <!-- Karteļu sadaļa -->
         <section class="cards-section" id="services">
             <h2>Apmācību programmas</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="https://placehold.co/300x200/3498db/ffffff" alt="Tiesnešu apmācība" class="card-image">
-                    <div class="card-content">
-                        <h3>Kata noteikumi</h3>
-                        <p>Pilnīga tiesnešu sagatavošana ar visiem nepieciešamajiem noteikumiem un vērtēšanas kritērijiem Kata sacensībām.</p>
-                        <a href="kata.html" class="card-button">Uzzināt vairāk</a>
-                    </div>
+            <!-- Meklēšanas un kārtošanas kontroles -->
+            <div class="controls-wrapper">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="🔍 Meklēt apmācības..." 
+                        class="search-input"
+                    >
                 </div>
                 
-                <div class="card">
-                    <img src="https://placehold.co/300x200/e74c3c/ffffff" alt="Sekretāru apmācība" class="card-image">
-                    <div class="card-content">
-                        <h3>Kumite noteikumi</h3>
-                        <p>Pilnīga tiesnešu sagatavošana ar visiem nepieciešamajiem noteikumiem un vērtēšanas kritērijiem Kumite sacensībām.</p>
-                        <a href="kumite.html" class="card-button">Uzzināt vairāk</a>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="https://placehold.co/300x200/2ecc71/ffffff" alt="Eksāmenu sagatavošana" class="card-image">
-                    <div class="card-content">
-                        <h3>Noteikumi sekretāriem</h3>
-                        <p>Specializēta apmācība sacensību sekretāriem ar dokumentācijas un protokolu sagatavošanu.</p>
-                        <a href="sekretari.html" class="card-button">Uzzināt vairāk</a>
-                    </div>
+                <div class="sort-buttons">
+                    <button class="sort-btn" id="sortAZ" data-sort="asc">
+                        <span>↑</span> A-Z
+                    </button>
+                    <button class="sort-btn" id="sortZA" data-sort="desc">
+                        <span>↓</span> Z-A
+                    </button>
+                    <button class="sort-btn" id="resetSort" data-sort="reset">
+                        <span>↻</span> Atiestatīt
+                    </button>
                 </div>
             </div>
+            
+            <!-- Rezultātu skaitītājs -->
+            <div class="results-count" id="resultsCount">
+                <span id="countText">Rāda visas apmācības</span>
+            </div>
+            
+            <!-- Dinamiskās kartītes (ģenerētas ar JavaScript) -->
+            <div class="cards-container" id="cardsContainer">
+                <!-- Cards will be dynamically generated here -->
+            </div>
+            
+            <!-- Nav rezultātu ziņojums -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>Nav atrasti rezultāti</h3>
+                <p>Mēģiniet mainīt meklēšanas kritērijus</p>
+            </div>
+            <br>
+            
         </section>
 
         <!-- Sānu josla -->
